@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+// Пользователь, с помощью команды prompt, вводит номер билета - 6 цифр.
+// Программа определяет, является ли счастливым данный билетик, и выводит соответстующее сообщение в консоль.
+// Счастливый билет - билет, у которого сумма первых трех цифр равна сумме последних трех цифр номера билета.
+// Для выполнения задания необходимо использовать оператор % и ветвление.
+'use strict';
+
+let ticket = +prompt("Введите номер билета (6 цифр).");
+let sum1 = Math.floor(ticket / (10 ** 0)) % 10 + Math.floor(ticket / (10 ** 1)) % 10 +
+    Math.floor(ticket / (10 ** 2)) % 10;
+let sum2 = Math.floor(ticket / (10 ** 3)) % 10 + Math.floor(ticket / (10 ** 4)) % 10 +
+    Math.floor(ticket / (10 ** 5)) % 10;
+// console.log(sum1);
+// console.log(sum2);
+
+if (sum1 === sum2) {
+    console.log("Happy ticket!");
+} else {
+    console.log("Not happy ticket.");
+}
+
+</script>
